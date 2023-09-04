@@ -73,13 +73,17 @@
         .mx-12{
             margin: 0 12px;
         }
+        .under-line-wrapper
         .under-line{
-            border-bottom: 2px;
-            border-color: transparent;
-            border-style: solid;
+            width: 100%;
+            height: 2px;
+            background: aqua;
+            transform: scaleX(0);
+            transition: all 0.3s;
+            transform-origin: left;
         }
-        .under-line:hover{
-            border-color: aqua;
+        .under-line-wrapper:hover .under-line{
+            transform: scale(1);
         }
         .w-100{
             width: 100%;
@@ -117,6 +121,9 @@
             /* display: flex; */
             align-items: center;         
         }
+        .pd-8{
+            padding-bottom: 8px;
+        }
     </style>
 </head>
 <body>
@@ -127,10 +134,22 @@
             </h1>
             <div>
                 <ul class="d-flex align-item-center">
-                <li class="px-12 mx-12 text-gray fw-bolder cursor-pointer under-line">首頁</li>
-                <li class="px-12 mx-12 text-gray fw-bolder cursor-pointer under-line">關於</li>
-                <li class="px-12 mx-12 text-gray fw-bolder cursor-pointer under-line">清單</li>
-                <li class="px-12 mx-12 text-gray fw-bolder cursor-pointer under-line">聯絡我們</li>
+                <li class="px-12 mx-12 text-gray fw-bolder cursor-pointer under-line-wrapper">
+                    <div class="pd-8">首頁</div>
+                    <div class="under-line"></div>
+                </li>
+                <li class="px-12 mx-12 text-gray fw-bolder cursor-pointer under-line-wrapper">
+                    <div class="pd-8">關於</div>
+                    <div class="under-line"></div>
+                </li>
+                <li class="px-12 mx-12 text-gray fw-bolder cursor-pointer under-line-wrapper">
+                    <div class="pd-8">清單</div>
+                    <div class="under-line"></div>
+                </li>
+                <li class="px-12 mx-12 text-gray fw-bolder cursor-pointer under-line-wrapper">
+                    <div class="pd-8">聯絡我們</div>
+                    <div class="under-line"></div>
+                </li>
             </div>
          </div>
     </header>
